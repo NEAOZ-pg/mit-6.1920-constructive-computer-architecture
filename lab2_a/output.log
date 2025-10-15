@@ -1,0 +1,179 @@
+Starting with the counter being 0
+m.inc() and x=m.cur() called in the same cycle:
+Next cycle
+m.inc() and m.set(42) and m.cur() in the same cycle:
+Next cycle
+m.cur() called alone
+StepCounterTest passed
+Start testing the register-based CBuffer
+Cycle          0
+Emit request with token: 0
+Cycle          1
+Emit request with token: 1
+Cycle          2
+Emit request with token: 2
+Cycle          3
+Emit request with token: 3
+Cycle          4
+Emit request with token: 4
+Completion buffer receive response corresponding to token: 1
+Cycle          5
+Emit request with token: 5
+Completion buffer receive response corresponding to token: 2
+Cycle          6
+Emit request with token: 6
+Completion buffer receive response corresponding to token: 0
+Cycle          7
+Emit request with token: 7
+The completion buffer CORRECTLY produced the result          0, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 6
+Cycle          8
+Completion buffer receive response corresponding to token: 3
+Cycle          9
+Emit request with token: 0
+The completion buffer CORRECTLY produced the result          1, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 5
+Cycle         10
+Completion buffer receive response corresponding to token: 0
+Cycle         11
+Emit request with token: 1
+The completion buffer CORRECTLY produced the result          2, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 4
+Cycle         12
+Completion buffer receive response corresponding to token: 7
+Cycle         13
+Emit request with token: 2
+The completion buffer CORRECTLY produced the result          3, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 1
+Cycle         14
+Completion buffer receive response corresponding to token: 2
+Cycle         15
+Emit request with token: 3
+The completion buffer CORRECTLY produced the result          4, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 3
+Cycle         16
+Cycle         17
+Emit request with token: 4
+The completion buffer CORRECTLY produced the result          5, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 4
+Cycle         18
+Cycle         19
+Emit request with token: 5
+The completion buffer CORRECTLY produced the result          6, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 5
+Cycle         20
+Cycle         21
+Emit request with token: 6
+The completion buffer CORRECTLY produced the result          7, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 6
+Cycle         22
+Cycle         23
+Emit request with token: 7
+The completion buffer CORRECTLY produced the result          0, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 7
+Cycle         24
+Cycle         25
+Emit request with token: 0
+The completion buffer CORRECTLY produced the result          1, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 0
+Cycle         26
+Cycle         27
+Emit request with token: 1
+The completion buffer CORRECTLY produced the result          2, which was the one expected in FIFO order.
+Completion buffer receive response corresponding to token: 1
+Cycle         28
+The completion buffer CORRECTLY produced the result          3, which was the one expected in FIFO order.
+Cycle         29
+The completion buffer CORRECTLY produced the result          4, which was the one expected in FIFO order.
+Cycle         30
+The completion buffer CORRECTLY produced the result          5, which was the one expected in FIFO order.
+Cycle         31
+The completion buffer CORRECTLY produced the result          6, which was the one expected in FIFO order.
+Cycle         32
+The completion buffer CORRECTLY produced the result          7, which was the one expected in FIFO order.
+Cycle         33
+The completion buffer CORRECTLY produced the result          0, which was the one expected in FIFO order.
+Cycle         34
+The completion buffer CORRECTLY produced the result          1, which was the one expected in FIFO order.
+CBufferTest passed in         35 cycles
+Emit request with token: 0
+Start testing the register-based CBuffer
+Cycle          0
+Emit request with token: 1
+Cycle          1
+Emit request with token: 2
+Cycle          2
+Emit request with token: 3
+Cycle          3
+Emit request with token: 4
+Cycle          4
+Emit request with token: 5
+Completion buffer received response corresponding to token: 1
+Cycle          5
+Emit request with token: 6
+Completion buffer received response corresponding to token: 2
+Cycle          6
+Emit request with token: 7
+Completion buffer received response corresponding to token: 0
+The completion buffer CORRECTLY produced the result          0, which was the one expected in FIFO order.
+Cycle          7
+Emit request with token: 0
+Completion buffer received response corresponding to token: 0
+The completion buffer CORRECTLY produced the result          1, which was the one expected in FIFO order.
+Cycle          8
+Emit request with token: 1
+Completion buffer received response corresponding to token: 6
+The completion buffer CORRECTLY produced the result          2, which was the one expected in FIFO order.
+Cycle          9
+Emit request with token: 2
+Completion buffer received response corresponding to token: 3
+The completion buffer CORRECTLY produced the result          3, which was the one expected in FIFO order.
+Cycle         10
+Emit request with token: 3
+Completion buffer received response corresponding to token: 5
+Cycle         11
+Completion buffer received response corresponding to token: 4
+The completion buffer CORRECTLY produced the result          4, which was the one expected in FIFO order.
+Cycle         12
+Emit request with token: 4
+Completion buffer received response corresponding to token: 2
+The completion buffer CORRECTLY produced the result          5, which was the one expected in FIFO order.
+Cycle         13
+Emit request with token: 5
+Completion buffer received response corresponding to token: 3
+The completion buffer CORRECTLY produced the result          6, which was the one expected in FIFO order.
+Cycle         14
+Emit request with token: 6
+Completion buffer received response corresponding to token: 7
+The completion buffer CORRECTLY produced the result          7, which was the one expected in FIFO order.
+Cycle         15
+Emit request with token: 7
+Completion buffer received response corresponding to token: 7
+The completion buffer CORRECTLY produced the result          0, which was the one expected in FIFO order.
+Cycle         16
+Emit request with token: 0
+Completion buffer received response corresponding to token: 1
+The completion buffer CORRECTLY produced the result          1, which was the one expected in FIFO order.
+Cycle         17
+Emit request with token: 1
+Completion buffer received response corresponding to token: 0
+The completion buffer CORRECTLY produced the result          2, which was the one expected in FIFO order.
+Cycle         18
+Completion buffer received response corresponding to token: 4
+The completion buffer CORRECTLY produced the result          3, which was the one expected in FIFO order.
+Cycle         19
+Completion buffer received response corresponding to token: 1
+The completion buffer CORRECTLY produced the result          4, which was the one expected in FIFO order.
+Cycle         20
+Completion buffer received response corresponding to token: 5
+The completion buffer CORRECTLY produced the result          5, which was the one expected in FIFO order.
+Cycle         21
+Completion buffer received response corresponding to token: 6
+The completion buffer CORRECTLY produced the result          6, which was the one expected in FIFO order.
+Cycle         22
+The completion buffer CORRECTLY produced the result          7, which was the one expected in FIFO order.
+Cycle         23
+The completion buffer CORRECTLY produced the result          0, which was the one expected in FIFO order.
+Cycle         24
+The completion buffer CORRECTLY produced the result          1, which was the one expected in FIFO order.
+CBufferEhrTest passed in         25 cycles
