@@ -1,0 +1,565 @@
+macOS
+Warning: file 'mem.vmh' for memory 'bram_memory' has a gap at addresses 1065 to 2047.
+Warning: file 'mem.vmh' for memory 'bram_memory' has a gap at addresses 2051 to 1073741823.
+
+
+cnt          0
+fetch               0
+fetch 2 decode               0
+
+
+cnt          1
+fetch               1
+fetch 2 decode               1
+decode               0
+decode 2 execute               0
+
+
+cnt          2
+fetch               2
+fetch 2 decode               2
+decode               1
+decode 2 execute               1
+execute               0
+exe 2 writeback               0
+
+
+cnt          3
+fetch               3
+fetch 2 decode               3
+decode               2
+decode 2 execute               2
+execute               1
+exe 2 writeback               1
+writeback               0
+
+
+cnt          4
+fetch               4
+fetch 2 decode               4
+decode               3
+decode 2 execute               3
+execute               2
+exe 2 writeback               2
+writeback               1
+
+
+cnt          5
+fetch               5
+fetch 2 decode               5
+decode               4
+decode 2 execute               4
+execute               3
+exe 2 writeback               3
+writeback               2
+
+
+cnt          6
+fetch               6
+fetch 2 decode               6
+decode               5
+decode 2 execute               5
+execute               4
+exe 2 writeback               4
+writeback               3
+
+
+cnt          7
+fetch               7
+fetch 2 decode               7
+decode               6
+decode 2 execute               6
+execute               5
+exe 2 writeback               5
+writeback               4
+
+
+cnt          8
+fetch               8
+fetch 2 decode               8
+decode               7
+decode 2 execute               7
+execute               6
+exe 2 writeback               6
+writeback               5
+
+
+cnt          9
+fetch               9
+fetch 2 decode               9
+decode               8
+decode 2 execute               8
+execute               7
+exe 2 writeback               7
+writeback               6
+
+
+cnt         10
+fetch              10
+fetch 2 decode              10
+decode               9
+decode 2 execute               9
+execute               8
+exe 2 writeback               8
+writeback               7
+
+
+cnt         11
+fetch              11
+fetch 2 decode              11
+decode              10
+decode 2 execute              10
+execute               9
+exe 2 writeback               9
+writeback               8
+
+
+cnt         12
+fetch              12
+fetch 2 decode              12
+decode              11
+decode 2 execute              11
+execute              10
+exe 2 writeback              10
+writeback               9
+
+
+cnt         13
+fetch              13
+fetch 2 decode              13
+decode              12
+decode 2 execute              12
+execute              11
+exe 2 writeback              11
+writeback              10
+
+
+cnt         14
+fetch              14
+fetch 2 decode              14
+decode              13
+decode 2 execute              13
+execute              12
+exe 2 writeback              12
+writeback              11
+
+
+cnt         15
+fetch              15
+fetch 2 decode              15
+decode              14
+decode 2 execute              14
+execute              13
+exe 2 writeback              13
+writeback              12
+
+
+cnt         16
+fetch              16
+fetch 2 decode              16
+decode              15
+decode 2 execute              15
+execute              14
+exe 2 writeback              14
+writeback              13
+
+
+cnt         17
+fetch              17
+fetch 2 decode              17
+decode              16
+decode 2 execute              16
+execute              15
+exe 2 writeback              15
+writeback              14
+
+
+cnt         18
+fetch              18
+fetch 2 decode              18
+decode              17
+decode 2 execute              17
+execute              16
+exe 2 writeback              16
+writeback              15
+
+
+cnt         19
+fetch              19
+fetch 2 decode              19
+decode              18
+decode 2 execute              18
+execute              17
+exe 2 writeback              17
+writeback              16
+
+
+cnt         20
+fetch              20
+fetch 2 decode              20
+decode              19
+decode 2 execute              19
+execute              18
+exe 2 writeback              18
+writeback              17
+
+
+cnt         21
+fetch              21
+fetch 2 decode              21
+decode              20
+decode 2 execute              20
+execute              19
+exe 2 writeback              19
+writeback              18
+
+
+cnt         22
+fetch              22
+fetch 2 decode              22
+decode              21
+decode 2 execute              21
+execute              20
+exe 2 writeback              20
+writeback              19
+
+
+cnt         23
+fetch              23
+fetch 2 decode              23
+decode              22
+decode 2 execute              22
+execute              21
+exe 2 writeback              21
+writeback              20
+
+
+cnt         24
+fetch              24
+fetch 2 decode              24
+decode              23
+decode 2 execute              23
+execute              22
+exe 2 writeback              22
+writeback              21
+
+
+cnt         25
+fetch              25
+fetch 2 decode              25
+decode              24
+decode 2 execute              24
+execute              23
+exe 2 writeback              23
+writeback              22
+
+
+cnt         26
+fetch              26
+fetch 2 decode              26
+decode              25
+decode 2 execute              25
+execute              24
+exe 2 writeback              24
+writeback              23
+
+
+cnt         27
+fetch              27
+fetch 2 decode              27
+decode              26
+decode 2 execute              26
+execute              25
+exe 2 writeback              25
+writeback              24
+
+
+cnt         28
+fetch              28
+fetch 2 decode              28
+decode              27
+decode 2 execute              27
+execute              26
+exe 2 writeback              26
+writeback              25
+
+
+cnt         29
+fetch              29
+fetch 2 decode              29
+decode              28
+decode 2 execute              28
+execute              27
+exe 2 writeback              27
+writeback              26
+
+
+cnt         30
+fetch              30
+fetch 2 decode              30
+decode              29
+decode 2 execute              29
+execute              28
+exe 2 writeback              28
+writeback              27
+
+
+cnt         31
+fetch              31
+fetch 2 decode              31
+decode              30
+decode 2 execute              30
+execute              29
+exe 2 writeback              29
+writeback              28
+
+
+cnt         32
+fetch              32
+fetch 2 decode              32
+decode              31
+decode 2 execute              31
+execute              30
+exe 2 writeback              30
+writeback              29
+
+
+cnt         33
+fetch              33
+fetch 2 decode              33
+decode              32
+execute              31
+exe 2 writeback              31
+writeback              30
+
+
+cnt         34
+decode              32
+decode 2 execute              32
+writeback              31
+
+
+cnt         35
+fetch              34
+fetch 2 decode              34
+decode              33
+decode 2 execute              33
+execute              32
+exe 2 writeback              32
+
+
+cnt         36
+fetch              35
+fetch 2 decode              35
+decode              34
+decode 2 execute              34
+execute              33
+exe 2 writeback              33
+writeback              32
+
+
+cnt         37
+fetch              36
+fetch 2 decode              36
+decode              35
+decode 2 execute              35
+execute              34
+writeback              33
+
+
+cnt         38
+fetch              37
+fetch 2 decode              37
+decode              36
+decode 2 execute              36
+execute              35
+
+
+cnt         39
+fetch              38
+fetch 2 decode              38
+decode              37
+decode 2 execute              37
+execute              36
+exe 2 writeback              36
+
+
+cnt         40
+fetch              39
+fetch 2 decode              39
+decode              38
+decode 2 execute              38
+execute              37
+exe 2 writeback              37
+writeback              36
+
+
+cnt         41
+fetch              40
+fetch 2 decode              40
+decode              39
+decode 2 execute              39
+execute              38
+writeback              37
+
+
+cnt         42
+fetch              41
+fetch 2 decode              41
+decode              40
+decode 2 execute              40
+execute              39
+
+
+cnt         43
+fetch              42
+fetch 2 decode              42
+decode              41
+decode 2 execute              41
+execute              40
+exe 2 writeback              40
+
+
+cnt         44
+fetch              43
+fetch 2 decode              43
+decode              42
+decode 2 execute              42
+execute              41
+exe 2 writeback              41
+writeback              40
+
+
+cnt         45
+fetch              44
+fetch 2 decode              44
+decode              43
+execute              42
+writeback              41
+
+
+cnt         46
+decode              43
+decode 2 execute              43
+
+
+cnt         47
+fetch              45
+fetch 2 decode              45
+decode              44
+execute              43
+
+
+cnt         48
+decode              44
+decode 2 execute              44
+
+
+cnt         49
+fetch              46
+fetch 2 decode              46
+decode              45
+execute              44
+exe 2 writeback              44
+
+
+cnt         50
+decode              45
+decode 2 execute              45
+writeback              44
+
+
+cnt         51
+fetch              47
+fetch 2 decode              47
+decode              46
+decode 2 execute              46
+execute              45
+exe 2 writeback              45
+
+
+cnt         52
+fetch              48
+fetch 2 decode              48
+decode              47
+execute              46
+exe 2 writeback              46
+writeback              45
+
+
+cnt         53
+decode              47
+decode 2 execute              47
+writeback              46
+
+
+cnt         54
+fetch              49
+fetch 2 decode              49
+decode              48
+decode 2 execute              48
+execute              47
+exe 2 writeback              47
+
+
+cnt         55
+fetch              50
+fetch 2 decode              50
+decode              49
+execute              48
+exe 2 writeback              48
+writeback              47
+
+
+cnt         56
+decode              49
+decode 2 execute              49
+writeback              48
+
+
+cnt         57
+fetch              51
+fetch 2 decode              51
+decode              50
+execute              49
+exe 2 writeback              49
+
+
+cnt         58
+decode              50
+decode 2 execute              50
+writeback              49
+
+
+cnt         59
+fetch              52
+fetch 2 decode              52
+decode              51
+decode 2 execute              51
+execute              50
+exe 2 writeback              50
+
+
+cnt         60
+fetch              53
+fetch 2 decode              53
+decode              52
+execute              51
+exe 2 writeback              51
+writeback              50
+
+
+cnt         61
+decode              52
+decode 2 execute              52
+writeback              51
+
+
+cnt         62
+fetch              54
+fetch 2 decode              54
+decode              53
+decode 2 execute              53
+execute              52
+exe 2 writeback              52
+detected arm64 mac
