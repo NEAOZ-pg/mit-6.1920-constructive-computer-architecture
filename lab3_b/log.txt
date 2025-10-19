@@ -1,0 +1,1918 @@
+macOS
+Warning: file 'mem.vmh' for memory 'bram_memory' has a gap at addresses 1065 to 2047.
+Warning: file 'mem.vmh' for memory 'bram_memory' has a gap at addresses 2051 to 1073741823.
+Warning: file './zero.vmh' for memory 'cacheState_memory' has a gap at addresses 128 to 255.
+Warning: file './zero.vmh' for memory 'cacheTag_memory' has a gap at addresses 128 to 255.
+Warning: file 'memlines.vmh' for memory 'cache_mainMem_bram_memory' has a gap at addresses 67 to 127.
+Warning: file 'memlines.vmh' for memory 'cache_mainMem_bram_memory' has a gap at addresses 129 to 67108863.
+tick=         0 mshr=0
+
+tick=         0 mshr=0
+
+tick=         1 mshr=0
+
+tick=         1 mshr=0
+
+cacheI req, 0
+
+-----cnt:         0------
+putFromProc:	addr=0x00000000	write=0000	data=0x00000000
+
+tick=         2 mshr=0
+
+tick=         2 mshr=1
+
+StartMiss:	addr=0x00000000	write=0000	data=0x00000000
+--miss	state=0	tag=0x00000	index=0x00
+
+tick=         3 mshr=0
+
+tick=         3 mshr=3
+
+cacheI req mem, 0
+
+tick=         4 mshr=0
+
+tick=         4 mshr=3
+
+tick=         5 mshr=0
+
+tick=         5 mshr=3
+
+tick=         6 mshr=0
+
+tick=         6 mshr=3
+
+tick=         7 mshr=0
+
+tick=         7 mshr=3
+
+tick=         8 mshr=0
+
+tick=         8 mshr=3
+
+tick=         9 mshr=0
+
+tick=         9 mshr=3
+
+tick=        10 mshr=0
+
+tick=        10 mshr=3
+
+tick=        11 mshr=0
+
+tick=        11 mshr=3
+
+tick=        12 mshr=0
+
+tick=        12 mshr=3
+
+tick=        13 mshr=0
+
+tick=        13 mshr=3
+
+tick=        14 mshr=0
+
+tick=        14 mshr=3
+
+tick=        15 mshr=0
+
+tick=        15 mshr=3
+
+tick=        16 mshr=0
+
+tick=        16 mshr=3
+
+tick=        17 mshr=0
+
+tick=        17 mshr=3
+
+tick=        18 mshr=0
+
+tick=        18 mshr=3
+
+tick=        19 mshr=0
+
+tick=        19 mshr=3
+
+tick=        20 mshr=0
+
+tick=        20 mshr=3
+
+tick=        21 mshr=0
+
+tick=        21 mshr=3
+
+tick=        22 mshr=0
+
+tick=        22 mshr=3
+
+tick=        23 mshr=0
+
+tick=        23 mshr=3
+
+tick=        24 mshr=0
+
+tick=        24 mshr=3
+
+tick=        25 mshr=0
+
+tick=        25 mshr=3
+
+tick=        26 mshr=0
+
+tick=        26 mshr=3
+
+tick=        27 mshr=0
+
+tick=        27 mshr=3
+
+cacheI resp mem, 1
+
+tick=        28 mshr=0
+
+tick=        28 mshr=3
+
+WaitFillResp:	addr=0x00000000	write=0000	data=0x00000000
+tag=0x00000	index=0x00	daddr=  0
+line=	0x00000813000007930000071300000693000006130000059300000513000004930000041300000393000003130000029300000213000001930000011300000093
+read=	0x00000093	
+
+cacheI resp, 0
+
+getToProc:	data=0x00000093
+--------------
+
+tick=        29 mshr=0
+
+tick=        29 mshr=0
+
+cacheI req, 0
+
+-----cnt:         1------
+putFromProc:	addr=0x00000004	write=0000	data=0x00000000
+
+tick=        30 mshr=0
+
+tick=        30 mshr=1
+
+StartMiss:	addr=0x00000004	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000113
+--------------
+
+tick=        31 mshr=0
+
+tick=        31 mshr=0
+
+cacheI req, 0
+
+-----cnt:         2------
+putFromProc:	addr=0x00000008	write=0000	data=0x00000000
+
+tick=        32 mshr=0
+
+tick=        32 mshr=1
+
+StartMiss:	addr=0x00000008	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000193
+--------------
+
+tick=        33 mshr=0
+
+tick=        33 mshr=0
+
+cacheI req, 0
+
+-----cnt:         3------
+putFromProc:	addr=0x0000000c	write=0000	data=0x00000000
+
+tick=        34 mshr=0
+
+tick=        34 mshr=1
+
+StartMiss:	addr=0x0000000c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000213
+--------------
+
+tick=        35 mshr=0
+
+tick=        35 mshr=0
+
+cacheI req, 0
+
+-----cnt:         4------
+putFromProc:	addr=0x00000010	write=0000	data=0x00000000
+
+tick=        36 mshr=0
+
+tick=        36 mshr=1
+
+StartMiss:	addr=0x00000010	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000293
+--------------
+
+tick=        37 mshr=0
+
+tick=        37 mshr=0
+
+cacheI req, 0
+
+-----cnt:         5------
+putFromProc:	addr=0x00000014	write=0000	data=0x00000000
+
+tick=        38 mshr=0
+
+tick=        38 mshr=1
+
+StartMiss:	addr=0x00000014	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000313
+--------------
+
+tick=        39 mshr=0
+
+tick=        39 mshr=0
+
+cacheI req, 0
+
+-----cnt:         6------
+putFromProc:	addr=0x00000018	write=0000	data=0x00000000
+
+tick=        40 mshr=0
+
+tick=        40 mshr=1
+
+StartMiss:	addr=0x00000018	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000393
+--------------
+
+tick=        41 mshr=0
+
+tick=        41 mshr=0
+
+cacheI req, 0
+
+-----cnt:         7------
+putFromProc:	addr=0x0000001c	write=0000	data=0x00000000
+
+tick=        42 mshr=0
+
+tick=        42 mshr=1
+
+StartMiss:	addr=0x0000001c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000413
+--------------
+
+tick=        43 mshr=0
+
+tick=        43 mshr=0
+
+cacheI req, 0
+
+-----cnt:         8------
+putFromProc:	addr=0x00000020	write=0000	data=0x00000000
+
+tick=        44 mshr=0
+
+tick=        44 mshr=1
+
+StartMiss:	addr=0x00000020	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000493
+--------------
+
+tick=        45 mshr=0
+
+tick=        45 mshr=0
+
+cacheI req, 0
+
+-----cnt:         9------
+putFromProc:	addr=0x00000024	write=0000	data=0x00000000
+
+tick=        46 mshr=0
+
+tick=        46 mshr=1
+
+StartMiss:	addr=0x00000024	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000513
+--------------
+
+tick=        47 mshr=0
+
+tick=        47 mshr=0
+
+cacheI req, 0
+
+-----cnt:        10------
+putFromProc:	addr=0x00000028	write=0000	data=0x00000000
+
+tick=        48 mshr=0
+
+tick=        48 mshr=1
+
+StartMiss:	addr=0x00000028	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000593
+--------------
+
+tick=        49 mshr=0
+
+tick=        49 mshr=0
+
+cacheI req, 0
+
+-----cnt:        11------
+putFromProc:	addr=0x0000002c	write=0000	data=0x00000000
+
+tick=        50 mshr=0
+
+tick=        50 mshr=1
+
+StartMiss:	addr=0x0000002c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000613
+--------------
+
+tick=        51 mshr=0
+
+tick=        51 mshr=0
+
+cacheI req, 0
+
+-----cnt:        12------
+putFromProc:	addr=0x00000030	write=0000	data=0x00000000
+
+tick=        52 mshr=0
+
+tick=        52 mshr=1
+
+StartMiss:	addr=0x00000030	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000693
+--------------
+
+tick=        53 mshr=0
+
+tick=        53 mshr=0
+
+cacheI req, 0
+
+-----cnt:        13------
+putFromProc:	addr=0x00000034	write=0000	data=0x00000000
+
+tick=        54 mshr=0
+
+tick=        54 mshr=1
+
+StartMiss:	addr=0x00000034	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000713
+--------------
+
+tick=        55 mshr=0
+
+tick=        55 mshr=0
+
+cacheI req, 0
+
+-----cnt:        14------
+putFromProc:	addr=0x00000038	write=0000	data=0x00000000
+
+tick=        56 mshr=0
+
+tick=        56 mshr=1
+
+StartMiss:	addr=0x00000038	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000793
+--------------
+
+tick=        57 mshr=0
+
+tick=        57 mshr=0
+
+cacheI req, 0
+
+-----cnt:        15------
+putFromProc:	addr=0x0000003c	write=0000	data=0x00000000
+
+tick=        58 mshr=0
+
+tick=        58 mshr=1
+
+StartMiss:	addr=0x0000003c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x00
+
+cacheI resp, 0
+
+getToProc:	data=0x00000813
+--------------
+
+tick=        59 mshr=0
+
+tick=        59 mshr=0
+
+cacheI req, 0
+
+-----cnt:        16------
+putFromProc:	addr=0x00000040	write=0000	data=0x00000000
+
+tick=        60 mshr=0
+
+tick=        60 mshr=1
+
+StartMiss:	addr=0x00000040	write=0000	data=0x00000000
+--miss	state=0	tag=0x00000	index=0x01
+
+tick=        61 mshr=0
+
+tick=        61 mshr=3
+
+cacheI req mem, 0
+
+tick=        62 mshr=0
+
+tick=        62 mshr=3
+
+tick=        63 mshr=0
+
+tick=        63 mshr=3
+
+tick=        64 mshr=0
+
+tick=        64 mshr=3
+
+tick=        65 mshr=0
+
+tick=        65 mshr=3
+
+tick=        66 mshr=0
+
+tick=        66 mshr=3
+
+tick=        67 mshr=0
+
+tick=        67 mshr=3
+
+tick=        68 mshr=0
+
+tick=        68 mshr=3
+
+tick=        69 mshr=0
+
+tick=        69 mshr=3
+
+tick=        70 mshr=0
+
+tick=        70 mshr=3
+
+tick=        71 mshr=0
+
+tick=        71 mshr=3
+
+tick=        72 mshr=0
+
+tick=        72 mshr=3
+
+tick=        73 mshr=0
+
+tick=        73 mshr=3
+
+tick=        74 mshr=0
+
+tick=        74 mshr=3
+
+tick=        75 mshr=0
+
+tick=        75 mshr=3
+
+tick=        76 mshr=0
+
+tick=        76 mshr=3
+
+tick=        77 mshr=0
+
+tick=        77 mshr=3
+
+tick=        78 mshr=0
+
+tick=        78 mshr=3
+
+tick=        79 mshr=0
+
+tick=        79 mshr=3
+
+tick=        80 mshr=0
+
+tick=        80 mshr=3
+
+tick=        81 mshr=0
+
+tick=        81 mshr=3
+
+tick=        82 mshr=0
+
+tick=        82 mshr=3
+
+tick=        83 mshr=0
+
+tick=        83 mshr=3
+
+tick=        84 mshr=0
+
+tick=        84 mshr=3
+
+tick=        85 mshr=0
+
+tick=        85 mshr=3
+
+cacheI resp mem, 1
+
+tick=        86 mshr=0
+
+tick=        86 mshr=3
+
+WaitFillResp:	addr=0x00000040	write=0000	data=0x00000000
+tag=0x00000	index=0x01	daddr=  0
+line=	0x1000013700000f9300000f1300000e9300000e1300000d9300000d1300000c9300000c1300000b9300000b1300000a9300000a13000009930000091300000893
+read=	0x00000893	
+
+cacheI resp, 0
+
+getToProc:	data=0x00000893
+--------------
+
+tick=        87 mshr=0
+
+tick=        87 mshr=0
+
+cacheI req, 0
+
+-----cnt:        17------
+putFromProc:	addr=0x00000044	write=0000	data=0x00000000
+
+tick=        88 mshr=0
+
+tick=        88 mshr=1
+
+StartMiss:	addr=0x00000044	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000913
+--------------
+
+tick=        89 mshr=0
+
+tick=        89 mshr=0
+
+cacheI req, 0
+
+-----cnt:        18------
+putFromProc:	addr=0x00000048	write=0000	data=0x00000000
+
+tick=        90 mshr=0
+
+tick=        90 mshr=1
+
+StartMiss:	addr=0x00000048	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000993
+--------------
+
+tick=        91 mshr=0
+
+tick=        91 mshr=0
+
+cacheI req, 0
+
+-----cnt:        19------
+putFromProc:	addr=0x0000004c	write=0000	data=0x00000000
+
+tick=        92 mshr=0
+
+tick=        92 mshr=1
+
+StartMiss:	addr=0x0000004c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000a13
+--------------
+
+tick=        93 mshr=0
+
+tick=        93 mshr=0
+
+cacheI req, 0
+
+-----cnt:        20------
+putFromProc:	addr=0x00000050	write=0000	data=0x00000000
+
+tick=        94 mshr=0
+
+tick=        94 mshr=1
+
+StartMiss:	addr=0x00000050	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000a93
+--------------
+
+tick=        95 mshr=0
+
+tick=        95 mshr=0
+
+cacheI req, 0
+
+-----cnt:        21------
+putFromProc:	addr=0x00000054	write=0000	data=0x00000000
+
+tick=        96 mshr=0
+
+tick=        96 mshr=1
+
+StartMiss:	addr=0x00000054	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000b13
+--------------
+
+tick=        97 mshr=0
+
+tick=        97 mshr=0
+
+cacheI req, 0
+
+-----cnt:        22------
+putFromProc:	addr=0x00000058	write=0000	data=0x00000000
+
+tick=        98 mshr=0
+
+tick=        98 mshr=1
+
+StartMiss:	addr=0x00000058	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000b93
+--------------
+
+tick=        99 mshr=0
+
+tick=        99 mshr=0
+
+cacheI req, 0
+
+-----cnt:        23------
+putFromProc:	addr=0x0000005c	write=0000	data=0x00000000
+
+tick=       100 mshr=0
+
+tick=       100 mshr=1
+
+StartMiss:	addr=0x0000005c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000c13
+--------------
+
+tick=       101 mshr=0
+
+tick=       101 mshr=0
+
+cacheI req, 0
+
+-----cnt:        24------
+putFromProc:	addr=0x00000060	write=0000	data=0x00000000
+
+tick=       102 mshr=0
+
+tick=       102 mshr=1
+
+StartMiss:	addr=0x00000060	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000c93
+--------------
+
+tick=       103 mshr=0
+
+tick=       103 mshr=0
+
+cacheI req, 0
+
+-----cnt:        25------
+putFromProc:	addr=0x00000064	write=0000	data=0x00000000
+
+tick=       104 mshr=0
+
+tick=       104 mshr=1
+
+StartMiss:	addr=0x00000064	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000d13
+--------------
+
+tick=       105 mshr=0
+
+tick=       105 mshr=0
+
+cacheI req, 0
+
+-----cnt:        26------
+putFromProc:	addr=0x00000068	write=0000	data=0x00000000
+
+tick=       106 mshr=0
+
+tick=       106 mshr=1
+
+StartMiss:	addr=0x00000068	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000d93
+--------------
+
+tick=       107 mshr=0
+
+tick=       107 mshr=0
+
+cacheI req, 0
+
+-----cnt:        27------
+putFromProc:	addr=0x0000006c	write=0000	data=0x00000000
+
+tick=       108 mshr=0
+
+tick=       108 mshr=1
+
+StartMiss:	addr=0x0000006c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000e13
+--------------
+
+tick=       109 mshr=0
+
+tick=       109 mshr=0
+
+cacheI req, 0
+
+-----cnt:        28------
+putFromProc:	addr=0x00000070	write=0000	data=0x00000000
+
+tick=       110 mshr=0
+
+tick=       110 mshr=1
+
+StartMiss:	addr=0x00000070	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000e93
+--------------
+
+tick=       111 mshr=0
+
+tick=       111 mshr=0
+
+cacheI req, 0
+
+-----cnt:        29------
+putFromProc:	addr=0x00000074	write=0000	data=0x00000000
+
+tick=       112 mshr=0
+
+tick=       112 mshr=1
+
+StartMiss:	addr=0x00000074	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000f13
+--------------
+
+tick=       113 mshr=0
+
+tick=       113 mshr=0
+
+cacheI req, 0
+
+-----cnt:        30------
+putFromProc:	addr=0x00000078	write=0000	data=0x00000000
+
+tick=       114 mshr=0
+
+tick=       114 mshr=1
+
+StartMiss:	addr=0x00000078	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x00000f93
+--------------
+
+tick=       115 mshr=0
+
+tick=       115 mshr=0
+
+cacheI req, 0
+
+-----cnt:        31------
+putFromProc:	addr=0x0000007c	write=0000	data=0x00000000
+
+tick=       116 mshr=0
+
+tick=       116 mshr=1
+
+StartMiss:	addr=0x0000007c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x01
+
+cacheI resp, 0
+
+getToProc:	data=0x10000137
+--------------
+
+tick=       117 mshr=0
+
+tick=       117 mshr=0
+
+cacheI req, 0
+
+-----cnt:        32------
+putFromProc:	addr=0x00000080	write=0000	data=0x00000000
+
+tick=       118 mshr=0
+
+tick=       118 mshr=1
+
+StartMiss:	addr=0x00000080	write=0000	data=0x00000000
+--miss	state=0	tag=0x00000	index=0x02
+
+tick=       119 mshr=0
+
+tick=       119 mshr=3
+
+cacheI req mem, 0
+
+tick=       120 mshr=0
+
+tick=       120 mshr=3
+
+tick=       121 mshr=0
+
+tick=       121 mshr=3
+
+tick=       122 mshr=0
+
+tick=       122 mshr=3
+
+tick=       123 mshr=0
+
+tick=       123 mshr=3
+
+tick=       124 mshr=0
+
+tick=       124 mshr=3
+
+tick=       125 mshr=0
+
+tick=       125 mshr=3
+
+tick=       126 mshr=0
+
+tick=       126 mshr=3
+
+tick=       127 mshr=0
+
+tick=       127 mshr=3
+
+tick=       128 mshr=0
+
+tick=       128 mshr=3
+
+tick=       129 mshr=0
+
+tick=       129 mshr=3
+
+tick=       130 mshr=0
+
+tick=       130 mshr=3
+
+tick=       131 mshr=0
+
+tick=       131 mshr=3
+
+tick=       132 mshr=0
+
+tick=       132 mshr=3
+
+tick=       133 mshr=0
+
+tick=       133 mshr=3
+
+tick=       134 mshr=0
+
+tick=       134 mshr=3
+
+tick=       135 mshr=0
+
+tick=       135 mshr=3
+
+tick=       136 mshr=0
+
+tick=       136 mshr=3
+
+tick=       137 mshr=0
+
+tick=       137 mshr=3
+
+tick=       138 mshr=0
+
+tick=       138 mshr=3
+
+tick=       139 mshr=0
+
+tick=       139 mshr=3
+
+tick=       140 mshr=0
+
+tick=       140 mshr=3
+
+tick=       141 mshr=0
+
+tick=       141 mshr=3
+
+tick=       142 mshr=0
+
+tick=       142 mshr=3
+
+tick=       143 mshr=0
+
+tick=       143 mshr=3
+
+cacheI resp mem, 1
+
+tick=       144 mshr=0
+
+tick=       144 mshr=3
+
+WaitFillResp:	addr=0x00000080	write=0000	data=0x00000000
+tag=0x00000	index=0x02	daddr=  0
+line=	0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006f7d9000ef00000513018010efff010113
+read=	0xff010113	
+
+cacheI resp, 0
+
+getToProc:	data=0xff010113
+--------------
+
+tick=       145 mshr=0
+
+tick=       145 mshr=0
+
+cacheI req, 0
+
+-----cnt:        33------
+putFromProc:	addr=0x00000084	write=0000	data=0x00000000
+
+tick=       146 mshr=0
+
+tick=       146 mshr=1
+
+StartMiss:	addr=0x00000084	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x02
+
+cacheI resp, 0
+
+getToProc:	data=0x018010ef
+--------------
+
+tick=       147 mshr=0
+
+tick=       147 mshr=0
+
+cacheI req, 0
+
+-----cnt:        34------
+putFromProc:	addr=0x00000088	write=0000	data=0x00000000
+
+tick=       148 mshr=0
+
+tick=       148 mshr=1
+
+StartMiss:	addr=0x00000088	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x02
+
+cacheI resp, 0
+
+getToProc:	data=0x00000513
+--------------
+
+tick=       149 mshr=0
+
+tick=       149 mshr=0
+
+cacheI req, 0
+
+-----cnt:        35------
+putFromProc:	addr=0x0000109c	write=0000	data=0x00000000
+
+tick=       150 mshr=0
+
+tick=       150 mshr=1
+
+StartMiss:	addr=0x0000109c	write=0000	data=0x00000000
+--miss	state=0	tag=0x00000	index=0x42
+
+tick=       151 mshr=0
+
+tick=       151 mshr=3
+
+cacheI req mem, 0
+
+tick=       152 mshr=0
+
+tick=       152 mshr=3
+
+tick=       153 mshr=0
+
+tick=       153 mshr=3
+
+tick=       154 mshr=0
+
+tick=       154 mshr=3
+
+tick=       155 mshr=0
+
+tick=       155 mshr=3
+
+tick=       156 mshr=0
+
+tick=       156 mshr=3
+
+tick=       157 mshr=0
+
+tick=       157 mshr=3
+
+tick=       158 mshr=0
+
+tick=       158 mshr=3
+
+tick=       159 mshr=0
+
+tick=       159 mshr=3
+
+tick=       160 mshr=0
+
+tick=       160 mshr=3
+
+tick=       161 mshr=0
+
+tick=       161 mshr=3
+
+tick=       162 mshr=0
+
+tick=       162 mshr=3
+
+tick=       163 mshr=0
+
+tick=       163 mshr=3
+
+tick=       164 mshr=0
+
+tick=       164 mshr=3
+
+tick=       165 mshr=0
+
+tick=       165 mshr=3
+
+tick=       166 mshr=0
+
+tick=       166 mshr=3
+
+tick=       167 mshr=0
+
+tick=       167 mshr=3
+
+tick=       168 mshr=0
+
+tick=       168 mshr=3
+
+tick=       169 mshr=0
+
+tick=       169 mshr=3
+
+tick=       170 mshr=0
+
+tick=       170 mshr=3
+
+tick=       171 mshr=0
+
+tick=       171 mshr=3
+
+tick=       172 mshr=0
+
+tick=       172 mshr=3
+
+tick=       173 mshr=0
+
+tick=       173 mshr=3
+
+tick=       174 mshr=0
+
+tick=       174 mshr=3
+
+tick=       175 mshr=0
+
+tick=       175 mshr=3
+
+cacheI resp mem, 1
+
+tick=       176 mshr=0
+
+tick=       176 mshr=3
+
+WaitFillResp:	addr=0x0000109c	write=0000	data=0x00000000
+tag=0x00000	index=0x42	daddr=224
+line=	0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0000806700b00513000080670201011301c1240300078513fec4278300e7a023fec42703
+read=	0x00b00513	
+
+cacheI resp, 0
+
+getToProc:	data=0x00b00513
+--------------
+
+tick=       177 mshr=0
+
+tick=       177 mshr=0
+
+cacheI req, 0
+
+-----cnt:        36------
+putFromProc:	addr=0x000010a0	write=0000	data=0x00000000
+
+tick=       178 mshr=0
+
+tick=       178 mshr=1
+
+StartMiss:	addr=0x000010a0	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x42
+
+cacheI resp, 0
+
+getToProc:	data=0x00008067
+--------------
+
+tick=       179 mshr=0
+
+tick=       179 mshr=0
+
+cacheI req, 0
+
+-----cnt:        37------
+putFromProc:	addr=0x000010a4	write=0000	data=0x00000000
+
+tick=       180 mshr=0
+
+tick=       180 mshr=1
+
+StartMiss:	addr=0x000010a4	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x42
+
+cacheI resp, 0
+
+getToProc:	data=0xaaaaaaaa
+--------------
+
+tick=       181 mshr=0
+
+tick=       181 mshr=0
+
+cacheI req, 0
+
+-----cnt:        38------
+putFromProc:	addr=0x00000088	write=0000	data=0x00000000
+
+tick=       182 mshr=0
+
+tick=       182 mshr=1
+
+StartMiss:	addr=0x00000088	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x02
+
+cacheI resp, 0
+
+getToProc:	data=0x00000513
+--------------
+
+tick=       183 mshr=0
+
+tick=       183 mshr=0
+
+cacheI req, 0
+
+-----cnt:        39------
+putFromProc:	addr=0x0000008c	write=0000	data=0x00000000
+
+tick=       184 mshr=0
+
+tick=       184 mshr=1
+
+StartMiss:	addr=0x0000008c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x02
+
+cacheI resp, 0
+
+getToProc:	data=0x7d9000ef
+--------------
+
+tick=       185 mshr=0
+
+tick=       185 mshr=0
+
+cacheI req, 0
+
+-----cnt:        40------
+putFromProc:	addr=0x00000090	write=0000	data=0x00000000
+
+tick=       186 mshr=0
+
+tick=       186 mshr=1
+
+StartMiss:	addr=0x00000090	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x02
+
+cacheI resp, 0
+
+getToProc:	data=0x0000006f
+--------------
+
+tick=       187 mshr=0
+
+tick=       187 mshr=0
+
+cacheI req, 0
+
+-----cnt:        41------
+putFromProc:	addr=0x00001064	write=0000	data=0x00000000
+
+tick=       188 mshr=0
+
+tick=       188 mshr=1
+
+StartMiss:	addr=0x00001064	write=0000	data=0x00000000
+--miss	state=0	tag=0x00000	index=0x41
+
+tick=       189 mshr=0
+
+tick=       189 mshr=3
+
+cacheI req mem, 0
+
+tick=       190 mshr=0
+
+tick=       190 mshr=3
+
+tick=       191 mshr=0
+
+tick=       191 mshr=3
+
+tick=       192 mshr=0
+
+tick=       192 mshr=3
+
+tick=       193 mshr=0
+
+tick=       193 mshr=3
+
+tick=       194 mshr=0
+
+tick=       194 mshr=3
+
+tick=       195 mshr=0
+
+tick=       195 mshr=3
+
+tick=       196 mshr=0
+
+tick=       196 mshr=3
+
+tick=       197 mshr=0
+
+tick=       197 mshr=3
+
+tick=       198 mshr=0
+
+tick=       198 mshr=3
+
+tick=       199 mshr=0
+
+tick=       199 mshr=3
+
+tick=       200 mshr=0
+
+tick=       200 mshr=3
+
+tick=       201 mshr=0
+
+tick=       201 mshr=3
+
+tick=       202 mshr=0
+
+tick=       202 mshr=3
+
+tick=       203 mshr=0
+
+tick=       203 mshr=3
+
+tick=       204 mshr=0
+
+tick=       204 mshr=3
+
+tick=       205 mshr=0
+
+tick=       205 mshr=3
+
+tick=       206 mshr=0
+
+tick=       206 mshr=3
+
+tick=       207 mshr=0
+
+tick=       207 mshr=3
+
+tick=       208 mshr=0
+
+tick=       208 mshr=3
+
+tick=       209 mshr=0
+
+tick=       209 mshr=3
+
+tick=       210 mshr=0
+
+tick=       210 mshr=3
+
+tick=       211 mshr=0
+
+tick=       211 mshr=3
+
+tick=       212 mshr=0
+
+tick=       212 mshr=3
+
+tick=       213 mshr=0
+
+tick=       213 mshr=3
+
+cacheI resp mem, 1
+
+tick=       214 mshr=0
+
+tick=       214 mshr=3
+
+WaitFillResp:	addr=0x00001064	write=0000	data=0x00000000
+tag=0x00000	index=0x41	daddr=288
+line=	0x0007a783f947879300001797fea426230201041300812e23fe010113000080670201011301c1240300078513fec4278300e7a023fec427030007a783fc478793
+read=	0xfe010113	
+
+cacheI resp, 0
+
+getToProc:	data=0xfe010113
+--------------
+
+tick=       215 mshr=0
+
+tick=       215 mshr=0
+
+cacheI req, 0
+
+-----cnt:        42------
+putFromProc:	addr=0x00001068	write=0000	data=0x00000000
+
+tick=       216 mshr=0
+
+tick=       216 mshr=1
+
+StartMiss:	addr=0x00001068	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x41
+
+cacheI resp, 0
+
+getToProc:	data=0x00812e23
+--------------
+
+tick=       217 mshr=0
+
+tick=       217 mshr=0
+
+cacheI req, 0
+
+-----cnt:        43------
+putFromProc:	addr=0x0000106c	write=0000	data=0x00000000
+
+cacheD req, 0
+
+-----cnt:         0------
+putFromProc:	addr=0x0fffffec	write=1111	data=0x00000000
+
+tick=       218 mshr=1
+
+StartMiss:	addr=0x0fffffec	write=1111	data=0x00000000
+--miss	state=0	tag=0x07fff	index=0x7f
+
+tick=       218 mshr=1
+
+StartMiss:	addr=0x0000106c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x41
+
+cacheI resp, 0
+
+getToProc:	data=0x02010413
+--------------
+
+cacheD resp, 0
+
+tick=       219 mshr=3
+
+tick=       219 mshr=0
+
+cacheI req, 0
+
+-----cnt:        44------
+putFromProc:	addr=0x00001070	write=0000	data=0x00000000
+
+cacheD req mem, 0
+
+tick=       220 mshr=3
+
+tick=       220 mshr=1
+
+StartMiss:	addr=0x00001070	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x41
+
+cacheI resp, 0
+
+getToProc:	data=0xfea42623
+--------------
+
+tick=       221 mshr=3
+
+tick=       221 mshr=0
+
+cacheI req, 0
+
+-----cnt:        45------
+putFromProc:	addr=0x00001074	write=0000	data=0x00000000
+
+tick=       222 mshr=3
+
+tick=       222 mshr=1
+
+StartMiss:	addr=0x00001074	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x41
+
+cacheI resp, 0
+
+getToProc:	data=0x00001797
+--------------
+
+tick=       223 mshr=3
+
+tick=       223 mshr=0
+
+cacheI req, 0
+
+-----cnt:        46------
+putFromProc:	addr=0x00001078	write=0000	data=0x00000000
+
+tick=       224 mshr=3
+
+tick=       224 mshr=1
+
+StartMiss:	addr=0x00001078	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x41
+
+cacheI resp, 0
+
+getToProc:	data=0xf9478793
+--------------
+
+tick=       225 mshr=3
+
+tick=       225 mshr=0
+
+cacheI req, 0
+
+-----cnt:        47------
+putFromProc:	addr=0x0000107c	write=0000	data=0x00000000
+
+tick=       226 mshr=3
+
+tick=       226 mshr=1
+
+StartMiss:	addr=0x0000107c	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x41
+
+tick=       227 mshr=3
+
+tick=       227 mshr=0
+
+tick=       228 mshr=3
+
+tick=       228 mshr=0
+
+tick=       229 mshr=3
+
+tick=       229 mshr=0
+
+tick=       230 mshr=3
+
+tick=       230 mshr=0
+
+tick=       231 mshr=3
+
+tick=       231 mshr=0
+
+tick=       232 mshr=3
+
+tick=       232 mshr=0
+
+tick=       233 mshr=3
+
+tick=       233 mshr=0
+
+tick=       234 mshr=3
+
+tick=       234 mshr=0
+
+tick=       235 mshr=3
+
+tick=       235 mshr=0
+
+tick=       236 mshr=3
+
+tick=       236 mshr=0
+
+tick=       237 mshr=3
+
+tick=       237 mshr=0
+
+tick=       238 mshr=3
+
+tick=       238 mshr=0
+
+tick=       239 mshr=3
+
+tick=       239 mshr=0
+
+tick=       240 mshr=3
+
+tick=       240 mshr=0
+
+tick=       241 mshr=3
+
+tick=       241 mshr=0
+
+tick=       242 mshr=3
+
+tick=       242 mshr=0
+
+tick=       243 mshr=3
+
+tick=       243 mshr=0
+
+tick=       244 mshr=3
+
+tick=       244 mshr=0
+
+cacheD resp mem, 1
+
+tick=       245 mshr=3
+
+WaitFillResp:	addr=0x0fffffec	write=1111	data=0x00000000
+line=	0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+new=	0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa00000000aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+tick=       245 mshr=0
+
+tick=       246 mshr=0
+
+tick=       246 mshr=0
+
+cacheD req, 0
+
+-----cnt:         1------
+putFromProc:	addr=0x0fffffdc	write=1111	data=0x00000000
+
+tick=       247 mshr=1
+
+StartMiss:	addr=0x0fffffdc	write=1111	data=0x00000000
+--hit	state=2	tag=0x07fff	index=0x7f
+
+tick=       247 mshr=0
+
+cacheD resp, 0
+
+tick=       248 mshr=0
+
+tick=       248 mshr=0
+
+tick=       249 mshr=0
+
+tick=       249 mshr=0
+
+cacheI resp, 0
+
+getToProc:	data=0x0007a783
+--------------
+
+cacheI req, 0
+
+-----cnt:        48------
+putFromProc:	addr=0x00001080	write=0000	data=0x00000000
+
+tick=       250 mshr=0
+
+tick=       250 mshr=1
+
+StartMiss:	addr=0x00001080	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x42
+
+tick=       251 mshr=0
+
+tick=       251 mshr=0
+
+cacheI resp, 0
+
+getToProc:	data=0xfec42703
+--------------
+
+cacheI req, 0
+
+-----cnt:        49------
+putFromProc:	addr=0x00001084	write=0000	data=0x00000000
+
+cacheD req, 0
+
+-----cnt:         2------
+putFromProc:	addr=0x00002008	write=0000	data=0x00000000
+
+tick=       252 mshr=1
+
+StartMiss:	addr=0x00002008	write=0000	data=0x00000000
+--miss	state=0	tag=0x00001	index=0x00
+
+tick=       252 mshr=1
+
+StartMiss:	addr=0x00001084	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x42
+
+cacheI resp, 0
+
+getToProc:	data=0x00e7a023
+--------------
+
+tick=       253 mshr=3
+
+tick=       253 mshr=0
+
+cacheI req, 0
+
+-----cnt:        50------
+putFromProc:	addr=0x00001088	write=0000	data=0x00000000
+
+cacheD req mem, 0
+
+tick=       254 mshr=3
+
+tick=       254 mshr=1
+
+StartMiss:	addr=0x00001088	write=0000	data=0x00000000
+--hit	state=1	tag=0x00000	index=0x42
+
+tick=       255 mshr=3
+
+tick=       255 mshr=0
+
+tick=       256 mshr=3
+
+tick=       256 mshr=0
+
+tick=       257 mshr=3
+
+tick=       257 mshr=0
+
+tick=       258 mshr=3
+
+tick=       258 mshr=0
+
+tick=       259 mshr=3
+
+tick=       259 mshr=0
+
+tick=       260 mshr=3
+
+tick=       260 mshr=0
+
+tick=       261 mshr=3
+
+tick=       261 mshr=0
+
+tick=       262 mshr=3
+
+tick=       262 mshr=0
+
+tick=       263 mshr=3
+
+tick=       263 mshr=0
+
+tick=       264 mshr=3
+
+tick=       264 mshr=0
+
+tick=       265 mshr=3
+
+tick=       265 mshr=0
+
+tick=       266 mshr=3
+
+tick=       266 mshr=0
+
+tick=       267 mshr=3
+
+tick=       267 mshr=0
+
+tick=       268 mshr=3
+
+tick=       268 mshr=0
+
+tick=       269 mshr=3
+
+tick=       269 mshr=0
+
+tick=       270 mshr=3
+
+tick=       270 mshr=0
+
+tick=       271 mshr=3
+
+tick=       271 mshr=0
+
+tick=       272 mshr=3
+
+tick=       272 mshr=0
+
+tick=       273 mshr=3
+
+tick=       273 mshr=0
+
+tick=       274 mshr=3
+
+tick=       274 mshr=0
+
+tick=       275 mshr=3
+
+tick=       275 mshr=0
+
+tick=       276 mshr=3
+
+tick=       276 mshr=0
+
+tick=       277 mshr=3
+
+tick=       277 mshr=0
+
+tick=       278 mshr=3
+
+tick=       278 mshr=0
+
+cacheD resp mem, 1
+
+tick=       279 mshr=3
+
+WaitFillResp:	addr=0x00002008	write=0000	data=0x00000000
+tag=0x00001	index=0x00	daddr= 64
+line=	0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaf000fff8f000fff4f000fff0
+read=	0xf000fff8	
+
+tick=       279 mshr=0
+
+cacheD resp, 0
+
+getToProc:	data=0xf000fff8
+--------------
+
+tick=       280 mshr=0
+
+tick=       280 mshr=0
+
+cacheD req, 0
+
+-----cnt:         3------
+putFromProc:	addr=0x0fffffdc	write=0000	data=0x00000000
+
+tick=       281 mshr=1
+
+StartMiss:	addr=0x0fffffdc	write=0000	data=0x00000000
+--hit	state=2	tag=0x07fff	index=0x7f
+
+tick=       281 mshr=0
+
+cacheD resp, 0
+
+getToProc:	data=0x00000000
+--------------
+
+tick=       282 mshr=0
+
+tick=       282 mshr=0
+
+cacheI resp, 0
+
+getToProc:	data=0xfec42783
+--------------
+
+cacheI req, 0
+
+-----cnt:        51------
+putFromProc:	addr=0x0000108c	write=0000	data=0x00000000
+
+RAN CYCLES       282
+detected arm64 mac
