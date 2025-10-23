@@ -1,0 +1,201 @@
+=== Generated schedule for mkScoreboard ===
+
+Method schedule
+---------------
+Method: search1
+Ready signal: True
+Conflict-free: search1, search2
+Sequenced before: insert
+Sequenced after: eRemove, wRemove
+ 
+Method: search2
+Ready signal: True
+Conflict-free: search1, search2
+Sequenced before: insert
+Sequenced after: eRemove, wRemove
+ 
+Method: insert
+Ready signal: True
+Sequenced after: search1, search2, eRemove, wRemove
+Conflicts: insert
+ 
+Method: eRemove
+Ready signal: True
+Sequenced before: search1, search2, insert, wRemove
+Conflicts: eRemove
+ 
+Method: wRemove
+Ready signal: True
+Sequenced before: search1, search2, insert
+Sequenced after: eRemove
+Conflicts: wRemove
+ 
+Rule schedule
+-------------
+Rule: scoreboard_0_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_1_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_2_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_3_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_4_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_5_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_6_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_7_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_8_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_9_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_10_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_11_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_12_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_13_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_14_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_15_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_16_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_17_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_18_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_19_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_20_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_21_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_22_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_23_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_24_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_25_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_26_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_27_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_28_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_29_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_30_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: scoreboard_31_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Logical execution order: eRemove,
+			 wRemove,
+			 search1,
+			 search2,
+			 insert,
+			 scoreboard_0_canonicalize,
+			 scoreboard_1_canonicalize,
+			 scoreboard_2_canonicalize,
+			 scoreboard_3_canonicalize,
+			 scoreboard_4_canonicalize,
+			 scoreboard_5_canonicalize,
+			 scoreboard_6_canonicalize,
+			 scoreboard_7_canonicalize,
+			 scoreboard_8_canonicalize,
+			 scoreboard_9_canonicalize,
+			 scoreboard_10_canonicalize,
+			 scoreboard_11_canonicalize,
+			 scoreboard_12_canonicalize,
+			 scoreboard_13_canonicalize,
+			 scoreboard_14_canonicalize,
+			 scoreboard_15_canonicalize,
+			 scoreboard_16_canonicalize,
+			 scoreboard_17_canonicalize,
+			 scoreboard_18_canonicalize,
+			 scoreboard_19_canonicalize,
+			 scoreboard_20_canonicalize,
+			 scoreboard_21_canonicalize,
+			 scoreboard_22_canonicalize,
+			 scoreboard_23_canonicalize,
+			 scoreboard_24_canonicalize,
+			 scoreboard_25_canonicalize,
+			 scoreboard_26_canonicalize,
+			 scoreboard_27_canonicalize,
+			 scoreboard_28_canonicalize,
+			 scoreboard_29_canonicalize,
+			 scoreboard_30_canonicalize,
+			 scoreboard_31_canonicalize
+
+============================================

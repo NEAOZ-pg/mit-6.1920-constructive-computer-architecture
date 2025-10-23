@@ -61,7 +61,7 @@ module mkCacheInterface(CacheInterface);
         if (debug) $display("cacheD req mem, %d\n", l1DReql2[0]);
         MainMemReq l1req <- cacheD.getToMem();
         cacheL2.putFromProc(l1req);
-        l1DReql2[0] <= True;
+        l1DReql2[0] <= (l1req.write == 0);
     endrule
 
     rule reqMainMen;

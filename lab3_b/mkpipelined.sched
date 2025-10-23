@@ -1,0 +1,813 @@
+=== Generated schedule for mkpipelined ===
+
+Method schedule
+---------------
+Method: getIReq
+Ready signal: toImem_rv.port1__read[68]
+Conflict-free: getIResp, getDReq, getDResp, getMMIOReq, getMMIOResp
+Conflicts: getIReq
+ 
+Method: getIResp
+Ready signal: ! fromImem_rv.port0__read[68]
+Conflict-free: getIReq, getDReq, getDResp, getMMIOReq, getMMIOResp
+Conflicts: getIResp
+ 
+Method: getDReq
+Ready signal: toDmem_rv.port1__read[68]
+Conflict-free: getIReq, getIResp, getDResp, getMMIOReq, getMMIOResp
+Conflicts: getDReq
+ 
+Method: getDResp
+Ready signal: ! fromDmem_rv.port0__read[68]
+Conflict-free: getIReq, getIResp, getDReq, getMMIOReq, getMMIOResp
+Conflicts: getDResp
+ 
+Method: getMMIOReq
+Ready signal: toMMIO_rv.port1__read[68]
+Conflict-free: getIReq, getIResp, getDReq, getDResp, getMMIOResp
+Conflicts: getMMIOReq
+ 
+Method: getMMIOResp
+Ready signal: ! fromMMIO_rv.port0__read[68]
+Conflict-free: getIReq, getIResp, getDReq, getDResp, getMMIOReq
+Conflicts: getMMIOResp
+ 
+Rule schedule
+-------------
+Rule: pc_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_0_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_1_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_2_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_3_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_4_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_5_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_6_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_7_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_8_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_9_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_10_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_11_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_12_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_13_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_14_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_15_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_16_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_17_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_18_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_19_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_20_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_21_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_22_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_23_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_24_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_25_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_26_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_27_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_28_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_29_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_30_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rf_31_canonicalize
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: do_tic_logging
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: fetch
+Predicate: (! toImem_rv.port0__read[68]) && f2d.i_notFull && (! starting)
+Blocking rules: (none)
+ 
+Rule: decode
+Predicate: fromImem_rv.port1__read[68] &&
+	   ((sb.search1(fromImem_rv.port1__read[19:15]) &&
+	     ((fromImem_rv.port1__read[6:2] == 5'b11000) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b0) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b1000) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b1100) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b11001) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b100)) &&
+	     (! (fromImem_rv.port1__read[19:15] == 5'd0))) ||
+	    (sb.search2(fromImem_rv.port1__read[24:20]) &&
+	     ((fromImem_rv.port1__read[6:2] == 5'b11000) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b1000) ||
+	      (fromImem_rv.port1__read[6:2] == 5'b1100)) &&
+	     (! (fromImem_rv.port1__read[24:20] == 5'd0))) ||
+	    (f2d.i_notEmpty && d2e.i_notFull)) &&
+	   (! starting)
+Blocking rules: (none)
+ 
+Rule: execute
+Predicate: d2e.i_notEmpty &&
+	   ((d2e.first[112] == epoch)
+	    ? e2w.i_notFull &&
+	      (d2e.first[183] || (! (d2e.first[181:180] == 2'b0)) ||
+	       ((((d2e.first[111:80] +
+		   ((d2e.first[212] &&
+		     ((d2e.first[212]
+		       ? d2e.first[211:209]
+		       : (_ :: Bit 3)) ==
+		      3'd0))
+		    ? sext d2e.first[208:197]
+		    : ((d2e.first[212] &&
+			((d2e.first[212]
+			  ? d2e.first[211:209]
+			  : (_ :: Bit 3)) ==
+			 3'd1))
+		       ? sext {d2e.first[208:202], d2e.first[188:184]}
+		       : ((d2e.first[212] &&
+			   ((d2e.first[212]
+			     ? d2e.first[211:209]
+			     : (_ :: Bit 3)) ==
+			    3'd2))
+			  ? sext {d2e.first[208], d2e.first[184], d2e.first[207:202], d2e.first[188:185], 1'b0}
+			  : ((d2e.first[212] &&
+			      ((d2e.first[212]
+				? d2e.first[211:209]
+				: (_ :: Bit 3)) ==
+			       3'd3))
+			     ? {d2e.first[208:189], 12'b0}
+			     : ((d2e.first[212] &&
+				 ((d2e.first[212]
+				   ? d2e.first[211:209]
+				   : (_ :: Bit 3)) ==
+				  3'd4))
+				? sext {d2e.first[208], d2e.first[196:189], d2e.first[197], d2e.first[207:198], 1'b0}
+				: 32'd0))))))[31:2] ==
+		  30'd1006649340) ||
+		 ((d2e.first[111:80] +
+		   ((d2e.first[212] &&
+		     ((d2e.first[212]
+		       ? d2e.first[211:209]
+		       : (_ :: Bit 3)) ==
+		      3'd0))
+		    ? sext d2e.first[208:197]
+		    : ((d2e.first[212] &&
+			((d2e.first[212]
+			  ? d2e.first[211:209]
+			  : (_ :: Bit 3)) ==
+			 3'd1))
+		       ? sext {d2e.first[208:202], d2e.first[188:184]}
+		       : ((d2e.first[212] &&
+			   ((d2e.first[212]
+			     ? d2e.first[211:209]
+			     : (_ :: Bit 3)) ==
+			    3'd2))
+			  ? sext {d2e.first[208], d2e.first[184], d2e.first[207:202], d2e.first[188:185], 1'b0}
+			  : ((d2e.first[212] &&
+			      ((d2e.first[212]
+				? d2e.first[211:209]
+				: (_ :: Bit 3)) ==
+			       3'd3))
+			     ? {d2e.first[208:189], 12'b0}
+			     : ((d2e.first[212] &&
+				 ((d2e_first____d504(...)[212]
+				   ? d2e_first____d504(...)[211:209]
+				   : (_ :: Bit 3)) ==
+				  3'd4))
+				? sext {d2e.first[208], d2e.first[196:189], d2e_first____d504(...)[197], d2e_first____d504(...)[207:198], 1'b0}
+				: 32'd0))))))[31:2] ==
+		  30'd1006649341) ||
+		 ((d2e.first[111:80] +
+		   ((d2e.first[212] &&
+		     ((d2e.first[212]
+		       ? d2e.first[211:209]
+		       : (_ :: Bit 3)) ==
+		      3'd0))
+		    ? sext d2e.first[208:197]
+		    : ((d2e.first[212] &&
+			((d2e.first[212]
+			  ? d2e.first[211:209]
+			  : (_ :: Bit 3)) ==
+			 3'd1))
+		       ? sext {d2e.first[208:202], d2e.first[188:184]}
+		       : ((d2e.first[212] &&
+			   ((d2e.first[212]
+			     ? d2e.first[211:209]
+			     : (_ :: Bit 3)) ==
+			    3'd2))
+			  ? sext {d2e.first[208], d2e.first[184], d2e.first[207:202], d2e.first[188:185], 1'b0}
+			  : ((d2e.first[212] &&
+			      ((d2e.first[212]
+				? d2e.first[211:209]
+				: (_ :: Bit 3)) ==
+			       3'd3))
+			     ? {d2e.first[208:189], 12'b0}
+			     : ((d2e.first[212] &&
+				 ((d2e_first____d504(...)[212]
+				   ? d2e_first____d504(...)[211:209]
+				   : (_ :: Bit 3)) ==
+				  3'd4))
+				? sext {d2e.first[208], d2e.first[196:189], d2e_first____d504(...)[197], d2e_first____d504(...)[207:198], 1'b0}
+				: 32'd0))))))[31:2] ==
+		  30'd1006649342))
+		? ! toMMIO_rv.port0__read[68]
+		: (! toDmem_rv.port0__read[68])))
+	    : squashed.i_notFull) &&
+	   (! starting)
+Blocking rules: (none)
+ 
+Rule: writeback
+Predicate: e2w.i_notEmpty &&
+	   retired.i_notFull &&
+	   (e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+	    ((e2w.i_notEmpty && e2w.first[120])
+	     ? fromMMIO_rv.port1__read[68]
+	     : fromDmem_rv.port1__read[68])) &&
+	   ((! e2w.first[84]) ||
+	    (e2w.first[59:55] == 5'd0) ||
+	    case e2w.first[59:55] of
+	    5'd0 -> (! rf_0_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd1 -> (! rf_1_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd2 -> (! rf_2_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd3 -> (! rf_3_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd4 -> (! rf_4_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd5 -> (! rf_5_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd6 -> (! rf_6_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd7 -> (! rf_7_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd8 -> (! rf_8_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd9 -> (! rf_9_readBeforeLaterWrites_0.read) ||
+		    1'd0 || e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		    (((e2w.first[125:123] == 3'b0) ||
+		      (e2w.first[125:123] == 3'b1) ||
+		      (e2w.first[125:123] == 3'b100) ||
+		      (e2w.first[125:123] == 3'b101))
+		     ? (e2w.i_notEmpty && e2w.first[120])
+		       ? fromMMIO_rv.port1__read[68]
+		       : fromDmem_rv.port1__read[68]
+		     : ((! (e2w.first[125:123] == 3'b10)) ||
+			((e2w.i_notEmpty && e2w.first[120])
+			 ? fromMMIO_rv.port1__read[68]
+			 : fromDmem_rv.port1__read[68])))
+	    5'd10 -> (! rf_10_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd11 -> (! rf_11_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd12 -> (! rf_12_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd13 -> (! rf_13_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd14 -> (! rf_14_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd15 -> (! rf_15_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd16 -> (! rf_16_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd17 -> (! rf_17_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd18 -> (! rf_18_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd19 -> (! rf_19_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd20 -> (! rf_20_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd21 -> (! rf_21_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd22 -> (! rf_22_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd23 -> (! rf_23_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd24 -> (! rf_24_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd25 -> (! rf_25_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd26 -> (! rf_26_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd27 -> (! rf_27_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd28 -> (! rf_28_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd29 -> (! rf_29_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd30 -> (! rf_30_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    5'd31 -> (! rf_31_readBeforeLaterWrites_0.read) ||
+		     1'd0 ||
+		     e2w.first[54] || (! (e2w.first[52:51] == 2'b0)) ||
+		     (((e2w.first[125:123] == 3'b0) ||
+		       (e2w.first[125:123] == 3'b1) ||
+		       (e2w.first[125:123] == 3'b100) ||
+		       (e2w.first[125:123] == 3'b101))
+		      ? (e2w.i_notEmpty && e2w.first[120])
+			? fromMMIO_rv.port1__read[68]
+			: fromDmem_rv.port1__read[68]
+		      : ((! (e2w.first[125:123] == 3'b10)) ||
+			 ((e2w.i_notEmpty && e2w.first[120])
+			  ? fromMMIO_rv.port1__read[68]
+			  : fromDmem_rv.port1__read[68])))
+	    _ -> 1'd1) &&
+	   (! starting)
+Blocking rules: (none)
+ 
+Rule: administrative_konata_commit
+Predicate: retired.i_notEmpty
+Blocking rules: (none)
+ 
+Rule: administrative_konata_flush
+Predicate: squashed.i_notEmpty
+Blocking rules: (none)
+ 
+Logical execution order: getIResp,
+			 getDResp,
+			 getMMIOResp,
+			 fetch,
+			 getIReq,
+			 execute,
+			 getDReq,
+			 getMMIOReq,
+			 writeback,
+			 decode,
+			 administrative_konata_commit,
+			 administrative_konata_flush,
+			 do_tic_logging,
+			 pc_canonicalize,
+			 rf_0_canonicalize,
+			 rf_1_canonicalize,
+			 rf_2_canonicalize,
+			 rf_3_canonicalize,
+			 rf_4_canonicalize,
+			 rf_5_canonicalize,
+			 rf_6_canonicalize,
+			 rf_7_canonicalize,
+			 rf_8_canonicalize,
+			 rf_9_canonicalize,
+			 rf_10_canonicalize,
+			 rf_11_canonicalize,
+			 rf_12_canonicalize,
+			 rf_13_canonicalize,
+			 rf_14_canonicalize,
+			 rf_15_canonicalize,
+			 rf_16_canonicalize,
+			 rf_17_canonicalize,
+			 rf_18_canonicalize,
+			 rf_19_canonicalize,
+			 rf_20_canonicalize,
+			 rf_21_canonicalize,
+			 rf_22_canonicalize,
+			 rf_23_canonicalize,
+			 rf_24_canonicalize,
+			 rf_25_canonicalize,
+			 rf_26_canonicalize,
+			 rf_27_canonicalize,
+			 rf_28_canonicalize,
+			 rf_29_canonicalize,
+			 rf_30_canonicalize,
+			 rf_31_canonicalize
+
+===========================================
